@@ -1,0 +1,5 @@
+{
+    "configuration": "softdevice=s140v6,debug=l0",
+    "board": "adafruit:nrf52:sparkfunnrf52840mini",
+    "sketch": "src\\Beacons\\Beacons.ino"
+}
