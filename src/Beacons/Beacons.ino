@@ -2,6 +2,7 @@
 
 #include <bluefruit.h>
 #include <math.h>
+//Pines para lectura
 int Vgas = A5;
 int Vref = A4;
 int Vtmp = A3;
@@ -15,8 +16,9 @@ int Vtmp_value = 0;
 double M = 0;
 double Cx = 0;
 
-
+//funcion promedirar
 float promediar(){
+  //media entre 10000 valores
   for (int i=0; i<10000; i++){
     Vgas_value += analogRead(Vgas);
    /* Serial.println(i);
@@ -28,6 +30,7 @@ float promediar(){
   return Vgas_value;
 }
 
+//aplicación de la formular para la conenctracion en ppm
 void medidasVref(){
   
   float M = 34.33 * 499 *pow(10,-9) * pow(10,3);
@@ -40,6 +43,7 @@ void medidasVref(){
 
   float t = 1/M;
   /*Serial.println(t);*/
+  //Llamada a la función promediar
   float promedio = promediar();
   float vgasa = promedio* 0.806 * pow(10,-3);
   Serial.print("Valor vgas normal");
