@@ -12,12 +12,12 @@ double offset=0;
 int Vgas_value = 0;
 int Vref_value = 0;
 int Vtmp_value = 0;
-
-double M = 0;
 double Cx = 0;
+
 
 //funcion promedirar
 float promediar(){
+   int Vgas_value = 0;
   //media entre 10000 valores
   for (int i=0; i<10000; i++){
     Vgas_value += analogRead(Vgas);
@@ -32,6 +32,7 @@ float promediar(){
 
 //aplicación de la formular para la conenctracion en ppm
 void medidasVref(){
+
   
   float M = 34.33 * 499 *pow(10,-9) * pow(10,3);
   //Serial.print(M);
@@ -157,6 +158,7 @@ void loop() {
    //-------------------------------------------------------------
    using namespace Loop;
    //-------------------------------------------------------------
+   delay(5000);
    medidasVref();
    ComienzoEnvioBeacons();
 
