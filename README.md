@@ -1,4 +1,4 @@
-<h3 align = "center"> Sprint0_Arduino </h3>
+<h3 align = "center"> Proyecto Arduino </h3>
 
 ---
 <p align = "center"> En este repositorio se encuentra el código de Arduino capaz de enviar beacons
@@ -43,7 +43,7 @@ Herramientas -> Placa -> Gestor de Placas.
 Tras haber completa la instalación del IDE y haber elegido la placa y el puerto correspondiente, solo queda ubicarnos en la carpeta que contiene el programa y ejecutar el código con nombre:
 
 ```
-Sprint0.ino
+Beacons.ino
 ```
 
 ## 🔧 Ejecutando las pruebas <a name = "tests"> </a>
@@ -51,5 +51,5 @@ Sprint0.ino
 Para comprobar que funciona, ejecutamos el programa y abrimos en el móvil una aplicación capaz de detectar beacons como podría ser nRF Connect, activamos el bluettoth y buscamos entre la lista de beacons uno con el nombre
 
 ```
-GTI-3A-ClaudiaTorresCruz
+GTI-3ARoberto
 ```
